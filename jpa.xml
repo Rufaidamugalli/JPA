@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mapping version ="2.1"> </entity-mapping>
+
+<persistence-unit name="MyAppPU" transaction-type="RESOURCE_LOCAL">
+<!-- This is where you mention your JPA runtime provider e.g. it's EclipseLink here -->
+<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+<class name ="com.mugalli.Book"></class>
+
+<properties>
+    <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/my_schema"/>
+    <property name="javax.persistence.jdbc.password" value="pass"/>
+    <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+    <property name="javax.persistence.jdbc.user" value="user"/>
+</properties>
+
+</persistence-unit>
